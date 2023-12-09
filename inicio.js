@@ -1,23 +1,32 @@
-// Utilización del IF
-
-let edad = prompt ("Ingrese su edad")
-
-if (edad >= 18) {
-    alert("¡Felicidades!, sos mayor de edad, podes ingresar :)")
-} else {
-    alert("Lo siento, sos menor de edad, no podes ingresar :(")
+function Dólares () {
+    const valorPesos = parseInt(prompt ('ingrese su cantidad en pesos'))
+    const valorDolares = 950;
+    const resultado = valorPesos / valorDolares
+    alert ('Tienes' + ' ' + resultado + ' ' + 'Dólares')
 }
 
-// Utilización del FOR
-
-for (let x = 0; x < 10; x++) {
-    console.log("Este es el ciclo número " + x);
+function Euros () {
+    const valorPesos = parseInt(prompt ('ingrese su cantidad en pesos'))
+    const valorEuros = 1000;
+    const resultado = valorPesos / valorEuros
+    alert ('Tienes' + ' ' + resultado + ' ' + 'Euros')
 }
 
-// Utilización de funciones
-
-function saludar (nombre, apellido) {
-    console.log("hola " + nombre + " " + apellido + ", " + "¿Cómo estas?")
+function saludar () {
+    const nombre = prompt('Ingrese su nombre y apellido')
+    alert ('Hola' + ' ' + nombre + ' ' + '¿Como estás?' + ' ' + 'En esta página podrás hacer conversiones de divisas de Pesos a Dólares o de Pesos a Euros')
 }
+saludar()
 
-saludar("Lucas", "Morabito")
+let opcion = parseInt(prompt('Elija una opción:  \n 1- Dólares \n 2- Euros'));
+
+while(opcion !== 5){
+    switch(opcion){
+        case 1:        
+            Dólares()
+            break;
+        case 2:
+            Euros()
+            break;
+    }
+}
