@@ -1,32 +1,42 @@
-function Dólares () {
-    const valorPesos = parseInt(prompt ('ingrese su cantidad en pesos'))
-    const valorDolares = 950;
-    const resultado = valorPesos / valorDolares
-    alert ('Tienes' + ' ' + resultado + ' ' + 'Dólares')
+let hora = prompt('ingrese su hora actual')
+
+if (hora>=6 && hora<=12){
+    alert('Hola!, Buenos dias')
+}else if(hora>=13 && hora<=18){
+    alert('Hola!, Buenas tardes')
+}else{
+    alert('Hola!, Buenas noches')
 }
 
-function Euros () {
-    const valorPesos = parseInt(prompt ('ingrese su cantidad en pesos'))
-    const valorEuros = 1000;
-    const resultado = valorPesos / valorEuros
-    alert ('Tienes' + ' ' + resultado + ' ' + 'Euros')
+function conversorDolar () {
+    const dolar = 950
+    let pesos = parseInt(prompt ( 'ingrese la cantidad en pesos'))
+    let resultado = pesos / dolar
+    alert ('tienes un total de' + ' ' + resultado + ' ' + 'dólares')
 }
 
-function saludar () {
-    const nombre = prompt('Ingrese su nombre y apellido')
-    alert ('Hola' + ' ' + nombre + ' ' + '¿Como estás?' + ' ' + 'En esta página podrás hacer conversiones de divisas de Pesos a Dólares o de Pesos a Euros')
+function conversorEuro (moneda, valor ) {
+    let  pesos = parseInt(prompt('ingrese la cantidad en pesos'))
+    const euro = 1100
+    let resultado = pesos / euro
+    alert ('tienes un total de' + ' ' + resultado + ' ' + 'euros')
 }
-saludar()
 
 let opcion = parseInt(prompt('Elija una opción:  \n 1- Dólares \n 2- Euros'));
 
-while(opcion !== 5){
+while(opcion !==3){
     switch(opcion){
         case 1:        
-            Dólares()
+            conversorDolar()
             break;
         case 2:
-            Euros()
+            conversorEuro()
             break;
+
+        case 3:
+
+            
+        default: alert('numero no valido')
     }
+    
 }
