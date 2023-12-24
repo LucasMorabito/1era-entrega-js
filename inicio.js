@@ -32,7 +32,7 @@ const productos = [
 ];
 
 const mostrarMenuProductos = () => {
-    let catalogo = 'Catálogo de productos:\n\n';
+    let catalogo = 'Catálogo de productos:\n';
     productos.forEach(producto => {
         catalogo += `${producto.id}. ${producto.nombre} - $${producto.precio.toLocaleString()} pesos\n`;
     });
